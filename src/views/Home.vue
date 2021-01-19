@@ -1,18 +1,43 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="container">
+    <column-list :list="list"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import ColumnList, { ColumnProps } from '@/components/ColumnList.vue' // @ is an alias to /src
+const testData: ColumnProps[] = [
+  {
+    _id: '1',
+    title: 'jdsfsd',
+    description: 'sdfsdfsdfs',
+    avatar: {
+      _id: '1',
+      fitUrl: 'https://www.cssnano.cn/img/logo-alt.png'
 
+    }
+
+  }, {
+    _id: '2',
+    title: 'jdsfsd',
+    description: 'sdfsdfsdfs',
+    avatar: {
+      _id: '1',
+      fitUrl: 'https://www.cssnano.cn/img/logo-alt.png'
+
+    }
+
+  }]
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld
+    ColumnList
+  },
+  setup () {
+    return {
+      list: testData
+    }
   }
 })
 </script>
