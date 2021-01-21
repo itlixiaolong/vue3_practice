@@ -1,6 +1,6 @@
 <template>
   <div class="ColumnList row">
-    <div v-for="column in columonList" :key="column._id">
+    <div v-for="column in columonList" :key="column._id" class="col-4 mb-4">
        <div class="card h-100 shadow-sm">
         <div class="card-body text-center">
           <img :src="column.avatar&& column.avatar.fitUrl" :alt="column.title" class="rounded-circle border border-light my-3" >
@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, reactive, toRefs, ComputedRef, readonly, watchEffect } from 'vue'
+import { computed, defineComponent, PropType, reactive, toRefs } from 'vue'
 export interface ColumnProps {
   _id: string;
   title: string;
