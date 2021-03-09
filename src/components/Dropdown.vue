@@ -1,8 +1,7 @@
 <template>
-<div class="Dropdown">
-<!--html code-->
-
-</div>
+  <div class="Dropdown">
+    <!--html code-->
+  </div>
 </template>
 
 <script>

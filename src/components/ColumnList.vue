@@ -1,16 +1,32 @@
 <template>
   <div class="ColumnList row">
-    <div v-for="column in columonList" :key="column._id" class="col-4 mb-4">
-       <div class="card h-100 shadow-sm">
+    <div
+      v-for="column in columonList"
+      :key="column._id"
+      class="col-4 mb-4"
+    >
+      <div class="card h-100 shadow-sm">
         <div class="card-body text-center">
-          <img :src="column.avatar&& column.avatar.fitUrl" :alt="column.title" class="rounded-circle border border-light my-3" >
-          <h5 class="card-title">{{column.title}}</h5>
-          <p class="card-text text-left">{{column.description}}</p>
-          <router-link :to="`/column/${column._id}`" class="btn btn-outline-primary">进入专栏</router-link>
+          <img
+            :src="column.avatar&& column.avatar.fitUrl"
+            :alt="column.title"
+            class="rounded-circle border border-light my-3"
+          >
+          <h5 class="card-title">
+            {{ column.title }}
+          </h5>
+          <p class="card-text text-left">
+            {{ column.description }}
+          </p>
+          <router-link
+            :to="`/cloumn/${column._id}`"
+            class="btn btn-outline-primary"
+          >
+            进入专栏
+          </router-link>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 

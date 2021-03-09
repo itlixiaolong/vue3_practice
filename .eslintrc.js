@@ -4,7 +4,8 @@ module.exports = {
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/vue3-strongly-recommended',
+    'plugin:vue/vue3-recommended',
     '@vue/standard',
     '@vue/typescript/recommended'
   ],
@@ -15,6 +16,8 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'space-before-function-paren': 'off',
+    'no-tabs': 'off',
+    indent: ['error', 2],
     '@typescript-eslint/no-var-requires': 0
   },
   overrides: [
